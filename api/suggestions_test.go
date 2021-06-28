@@ -170,7 +170,7 @@ func TestResponseFormatting(t *testing.T) {
 			name: "result includes expected properties",
 			searchResponse: []cities.CityWithScore{{
 				City: cities.City{
-					GeoNameID: 1,
+					GeoNameID: "1",
 					Name:      "Wokingham",
 					Lat:       51.4112,
 					Lng:       -0.83565,
@@ -184,7 +184,7 @@ func TestResponseFormatting(t *testing.T) {
 			searchResponse: []cities.CityWithScore{
 				{
 					City: cities.City{
-						GeoNameID: 1,
+						GeoNameID: "1",
 						Name:      "Woking",
 						Lat:       51.31903,
 						Lng:       -0.55893,
@@ -193,7 +193,7 @@ func TestResponseFormatting(t *testing.T) {
 				},
 				{
 					City: cities.City{
-						GeoNameID: 1,
+						GeoNameID: "1",
 						Name:      "Wokingham",
 						Lat:       51.4112,
 						Lng:       -0.83565,
