@@ -23,7 +23,7 @@ type cityResult struct {
 	// I noticed in the sample response that these are strings.
 	// I think float64s make more sense - hope that's fair
 	Lat float64 `json:"latitude"`
-	Lng float64 `json:"longidude"`
+	Lng float64 `json:"longitude"`
 
 	Score float64 `json:"score"`
 }

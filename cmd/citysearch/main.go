@@ -12,9 +12,10 @@ import (
 )
 
 func main() {
-	log.SetLevel(log.DebugLevel)
+	log.SetLevel(log.InfoLevel)
 
 	fLoc := flag.String("cities", "", "location of the cities csv file")
+	fPort := flag.String("port", ":80", "port to serve on")
 	flag.Parse()
 
 	if fLoc == nil || *fLoc == "" {
@@ -33,5 +34,7 @@ func main() {
 
 	// single endpoint, so don't feel the need to do any fancy muxing
 	http.HandleFunc("/suggestions", api.NewCitySearchHandler(searcher))
-	log.Fatal(http.ListenAndServe(":8080", nil))
+
+	log.Info("Service starting on port ", *fPort)
+	log.Fatal(http.ListenAndServe(*fPort, nil))
 }

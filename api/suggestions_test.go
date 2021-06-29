@@ -177,7 +177,7 @@ func TestResponseFormatting(t *testing.T) {
 				},
 				Score: 0.8,
 			}},
-			expectedBody: `{"suggestions":[{"name":"Wokingham","latitude":51.4112,"longidude":-0.83565,"score":0.8}]}`,
+			expectedBody: `{"suggestions":[{"name":"Wokingham","latitude":51.4112,"longitude":-0.83565,"score":0.8}]}`,
 		},
 		{
 			name: "result sorted by score",
@@ -201,7 +201,7 @@ func TestResponseFormatting(t *testing.T) {
 					Score: 0.8,
 				},
 			},
-			expectedBody: `{"suggestions":[{"name":"Wokingham","latitude":51.4112,"longidude":-0.83565,"score":0.8},{"name":"Woking","latitude":51.31903,"longidude":-0.55893,"score":0.6}]}`,
+			expectedBody: `{"suggestions":[{"name":"Wokingham","latitude":51.4112,"longitude":-0.83565,"score":0.8},{"name":"Woking","latitude":51.31903,"longitude":-0.55893,"score":0.6}]}`,
 		},
 	}
 
